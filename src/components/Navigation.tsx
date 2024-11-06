@@ -8,6 +8,7 @@ export function Navigation() {
   const navItems = [
     { icon: Home, label: 'Inicio', path: '/' },
     { icon: Search, label: 'Explorar', path: '/explore' },
+    { icon: User, label: 'Comunidad', path: '/community' },
     { icon: Calendar, label: 'Reservas', path: '/bookings' },
     { icon: Heart, label: 'Guardado', path: '/saved' },
     { icon: User, label: 'Perfil', path: '/profile' },
