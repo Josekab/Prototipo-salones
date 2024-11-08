@@ -15,17 +15,17 @@ const SALONS = [
     image: 'https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&q=80&w=1000',
     location: 'Financial District',
     services: ['Corte de cabello', 'Recorte de barba', 'Toalla caliente'],
-    price: '$45+'
+    price: '₡25,000+'
   },
   {
     id: '7',
     name: 'Nail Paradise',
     rating: 4.6,
     reviewCount: 195,
-    image: 'https://images.unsplash.com/photo-1610992015732-2449b0bb0a86?auto=format&fit=crop&q=80&w=1000',
+    image: 'https://www.treatwell.es/partners/wp-content/uploads/sites/16/2023/05/Captura-de-Pantalla-2023-05-15-a-las-15.20.44-1024x685.png',
     location: 'Shopping Center',
     services: ['Manicure', 'Pedicure', 'Arte de uñas'],
-    price: '$35+'
+    price: '₡15,500+'
   },
   {
     id: '8',
@@ -35,7 +35,7 @@ const SALONS = [
     image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=1000',
     location: 'Riverside',
     services: ['Masaje', 'Facial', 'Depilación'],
-    price: '$85+'
+    price: '₡45,000+'
   }
 ];
 

@@ -7,6 +7,8 @@ import { Bookings } from './pages/Bookings';
 import { Saved } from './pages/Saved';
 import { Profile } from './pages/Profile';
 import { Navigation } from './components/Navigation';
+import { SalonDetail } from './pages/SalonDetail';
+import { Payment } from './pages/Payment';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
           <Route path="/bookings" element={<Bookings />} />
           <Route path="/saved" element={<Saved />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/salon/:id" element={<SalonDetail />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
         <Navigation />
       </div>

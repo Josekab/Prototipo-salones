@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Crown, Check } from 'lucide-react';
 
 export function PremiumBanner() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  const handleButtonClick = () => {
+    navigate('/payment'); // Redirect to Payment page
+  };
+
   return (
     <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg p-6 text-white mb-8">
       <div className="flex items-center gap-2 mb-4">
@@ -22,8 +29,11 @@ export function PremiumBanner() {
           </div>
         ))}
       </div>
-      <button className="w-full bg-white text-purple-600 py-2 rounded-full font-semibold hover:bg-purple-50 transition-colors">
-      Prueba gratis por 30 días
+      <button 
+        className="w-full bg-white text-purple-600 py-2 rounded-full font-semibold hover:bg-purple-50 transition-colors"
+        onClick={handleButtonClick} // Add onClick handler
+      >
+        Prueba gratis por 30 días
       </button>
     </div>
   );

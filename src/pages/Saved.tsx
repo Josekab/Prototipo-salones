@@ -12,7 +12,7 @@ const SAVED_SALONS = [
     image: 'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80&w=1000',
     location: 'Eastside',
     services: ['Cortes Premium', 'Color', 'Extensiones'],
-    price: '$75+'
+    price: '₡40,000+'
   },
   {
     id: '5',
@@ -22,7 +22,7 @@ const SAVED_SALONS = [
     image: 'https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&q=80&w=1000',
     location: 'Marina District',
     services: ['Masaje', 'Facial', 'Tratamientos Corporales'],
-    price: '$90+'
+    price: '₡55,000+'
   },
 ];
 

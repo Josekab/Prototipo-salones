@@ -4,6 +4,7 @@ import { SalonCard } from '../components/SalonCard';
 import { AdBanner } from '../components/AdBanner';
 import { PremiumBanner } from '../components/PremiumBanner';
 import { Scissors, Sparkles, Trophy } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FEATURED_SALONS = [
   {
@@ -14,7 +15,7 @@ const FEATURED_SALONS = [
     image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1000',
     location: 'Downtown',
     services: ['Haircut', 'Color', 'Styling'],
-    price: '$50+'
+    price: '₡25,000+'
   },
   {
     id: '2',
@@ -24,7 +25,7 @@ const FEATURED_SALONS = [
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1000',
     location: 'Midtown',
     services: ['Makeup', 'Nails', 'Facial'],
-    price: '$40+'
+    price: '₡15,000+'
   },
   {
     id: '3',
@@ -34,7 +35,7 @@ const FEATURED_SALONS = [
     image: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&q=80&w=1000',
     location: 'Westside',
     services: ['Haircut', 'Balayage', 'Treatment'],
-    price: '$60+'
+    price: '₡35,000+'
   }
 ];
 
@@ -58,7 +59,9 @@ export function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {FEATURED_SALONS.map((salon, index) => (
               <React.Fragment key={salon.id}>
-                <SalonCard salon={salon} />
+                <Link to={`/salon/${salon.id}`}>
+                  <SalonCard salon={salon} />
+                </Link>
                 {index === 1 && (
                   <AdBanner type="sponsored" className="h-full" />
                 )}
@@ -81,7 +84,7 @@ export function Home() {
                 className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow duration-300"
               >
                 <h3 className="font-medium text-gray-900">{service}</h3>
-                <p className="text-sm text-gray-500 mt-1">Desde $30</p>
+                <p className="text-sm text-gray-500 mt-1">Desde ₡15,000</p>
               </div>
             ))}
           </div>
@@ -94,7 +97,9 @@ export function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {FEATURED_SALONS.slice(0, 2).map((salon) => (
-              <SalonCard key={salon.id} salon={salon} />
+              <Link to={`/salon/${salon.id}`} key={salon.id}>
+                <SalonCard salon={salon} />
+              </Link>
             ))}
             <AdBanner type="inline" className="h-full" />
           </div>

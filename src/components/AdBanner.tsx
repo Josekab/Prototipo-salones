@@ -19,8 +19,9 @@ export function AdBanner({ type, className = '' }: AdBannerProps) {
         return {
           title: 'Premium Beauty Tools',
           description: 'Equipo de nivel profesional para tu salón.',
-          image: 'https://images.unsplash.com/photo-1522337094846-8a818d7aad6a?auto=format&fit=crop&q=80&w=1000',
+          image: 'https://i.ebayimg.com/thumbs/images/g/XqgAAOSwM9dlpMsu/s-l1200.jpg',
           cta: 'Comprar ahora'
+          
         };
       default:
         return {
@@ -35,17 +36,17 @@ export function AdBanner({ type, className = '' }: AdBannerProps) {
   const content = getAdContent();
 
   return (
-    <div className={`relative bg-white rounded-lg overflow-hidden shadow-md ${className}`}>
+    <div className={`relative bg-white rounded-lg overflow-hidden shadow-md max-w-md w-full mx-auto p-4 border border-gray-200 ${className}`}>
       <div className="absolute top-2 right-2 text-xs text-gray-500">Sponsored</div>
       <img
         src={content.image}
         alt={content.title}
-        className="w-full h-48 object-cover"
+        className="w-full h-40 object-cover rounded-md shadow-sm mb-4"
       />
-      <div className="p-4">
+      <div className="p-2 text-center">
         <h3 className="font-semibold text-lg text-gray-900">{content.title}</h3>
-        <p className="text-gray-600 text-sm mt-1">{content.description}</p>
-        <button className="mt-3 px-4 py-2 bg-purple-600 text-white rounded-full text-sm font-medium hover:bg-purple-700 transition-colors">
+        <p className="text-gray-600 text-sm mt-1 mb-3">{content.description}</p>
+        <button className="w-full md:w-auto px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors">
           {content.cta}
         </button>
       </div>
