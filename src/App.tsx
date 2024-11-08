@@ -9,6 +9,8 @@ import { Profile } from './pages/Profile';
 import { Navigation } from './components/Navigation';
 import { SalonDetail } from './pages/SalonDetail';
 import { Payment } from './pages/Payment';
+import { Support } from './pages/Support';
+import { Settings } from './pages/Settings';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/salon/:id" element={<SalonDetail />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/support" element={<Support />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
         <Navigation />
       </div>
